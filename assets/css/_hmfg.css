@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    color: #fff;
+    font-family: arial,helvetica;
+    margin:0;
+    overflow:hidden;
+    display: grid;
+    /*grid-template-columns: repeat(12, 1fr);*/
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 1fr 20px;
+}
+
+
+header {
+    background: deeppink;
+    grid-column: span 2;
+    justify-self:center;
+}
+
+.navv{
+    background-color: blue;
+    color:#000;
+    grid-column: span 1;
+}
+
+main {
+    background: whitesmoke;
+    color: #000;
+    grid-column: span 1;
+}
+
+footer {
+    background: purple;
+    grid-column: span 2;
+}

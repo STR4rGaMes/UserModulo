@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    color: white;
+    font-family: arial,helvetica;
+    margin:0;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    background: deeppink;
+    flex: 0 0 50px; /* <flex-grow (0)> <flex-shrink (1)> <flex-basis (auto)>*/
+    /*flex-basis: 50px;
+    flex-grow: 0; */
+}
+
+footer {
+    background: purple;
+    /*padding: 1rem;*/
+    flex: 0 0 20px; /* <flex-grow (0)> <flex-shrink (1)> <flex-basis (auto)> */
+}
+
+.main-container {
+    flex: 1 1 auto; /* height automatica, por consecuencia toma lo que queda viewport quitando el header y footer*/
+    display: flex;
+    
+    /*min-height: 100vh;
+    display:flex;*/
+    
+    /*display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;*/
+}
+
+.navv{
+    background-color: blue;
+    color:#000;
+    flex: 0 0 200px;
+    /*flex: 0 1 200px; con estos valores se  distorciona */ 
+    /*width: 200px; no usar width sino flex ya que no toma el tamaño definido*/
+}
+
+main {
+    background: whitesmoke;
+    color: #444;    
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+

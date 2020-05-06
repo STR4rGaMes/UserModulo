@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <base href="../" />
+  <title>Login - BootsExt</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/cyt/owner.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/ace.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/fontawesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/solid.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+  <style>
+    article{
+      background-image: url(assets/image/fondo_malla.jpg);
+    }
+    @media(max-width: 700px) {
+      .login-container {
+          grid-template-columns: minmax(300px,auto);
+          grid-template-rows: auto auto;
+          grid-template-areas: 
+            "mai"
+            "asi ";
+      }
+      .main-aside .c-logo {
+        display: none
+      }
+      .main-aside article {
+        padding-bottom: 1.5rem;
+        padding-left: 3rem;
+        padding-top: 0;
+      }
+      main{
+        padding-bottom: 3rem
+      }
+      main .c-logo {
+        display: block
+      }
+    }
+  </style>  
+</head>
+<body>
+<div class="login-container">
+  <aside class="main-aside"> 
+    <article class="d-flex flex-column bgc-primary-l4 px-1o5r py-3r">
+      <div class="c-logo ta-center">
+        <img src="assets/image/logo.png" style="width:120px;">
+      </div>
+      <p class="c-logo bc-grey-l1 ta-center fs-110g b-b-1 mt-1r">
+        Sistema Integrado de Gestión Universitaria
+      </p>
+      <a href="#" class="text c-grey-d3 d-inline-block mt-4">
+        <i class="fas fa-file-pdf text-lg c-danger mr-2"></i>Manual de Usuario
+      </a>
+      <br />
+      <a href="#" class="text c-grey-d3 d-inline-block mt-3">
+        <i class="fas fa-phone text-md c-purple-m2 mr-2"></i>995792654 - 953639582
+      </a>
+      <div class="fs-sm c-grey-d3 ta-center mt-3r">Copy Right &copy; 2020</div>
+    </article>
+  </aside>
+  <main class="main px-3r pt-3r">
+    <form class="d-grid" style="grid-template-columns: minmax(200px,1fr); gap:1rem;">
+      <div class="c-logo ta-center d-none">
+        <img src="assets/image/logo.png" style="width:120px;">
+      </div>
+      <p class="c-logo bc-grey-l1 ta-center fs-110g d-none">
+        Sistema Integrado de Gestión Universitaria
+      </p>
+
+      <p class="c-dark-tp4 b-b-1 bc-grey-l1 fs-120g">
+        <i class="fa fa-coffee c-orange-m2 text-lg mr-o5r"></i>Welcome
+      </p>
+      <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2" >
+        <input type="text" class="form-control form-control-md shadow-none w-100g" id="usur_login" autocomplete="off" />
+        <i class="fa fa-user c-grey-m2 ml-n4"></i>
+        <label class="floating-label c-grey-l1 fs-100g ml-n1r" for="usur_login">Usuario</label>
+      </div>
+      <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2" >
+        <select class="form-control form-control-md shadow-none w-100g" id="area_key"></select>
+        <label class="floating-label c-grey-l1 fs-100g ml-n1r" for="area_key">Unidad Orgánica</label>
+      </div>
+      <div class="d-flex align-items-center input-floating-label c-blue-m1 bc-blue-m2">
+        <input type="password" class="form-control form-control-md shadow-none w-100g" id="usur_psw1" autocomplete="off" />
+        <i class="fa fa-key c-grey-m2 ml-n4"></i>
+        <label class="floating-label c-grey-l1 ml-n1r" for="usur_psw1">Contraseña</label>
+      </div>
+      <div class="text-right text-md-right mt-no75r">
+        <a href="#" class="c-primary-m2 fs-90g" data-toggle="tab" data-target="#id-tab-forgot">¿Olvide mi Contraseña?</a>
+      </div>
+      <div>
+        <button type="button" class="btn btn-info btn-block btn-md btn-bold">Ingresar al Sistema</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="text/javascript" src="./assets/js/npm/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/js/umd/popper.min.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/ace.min.js"></script>
+  <script type="text/javascript" src="./assets/js/demo.min.js"></script>
+</div>
+</body>
+</html>

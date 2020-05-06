@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="description" content="Sistema de Gestion Presupuestal para instituciones publicas">
+  <base href="../" />
+  <title>BootsExt - Elements</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" href="./assets/css/cyt/owner.css">
+  <link rel="stylesheet" href="./assets/css/ace.css">
+  <link rel="stylesheet" href="./assets/css/cyt/ui.grid.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./assets/css/solid.min.css">
+  <link rel="stylesheet" href="./assets/css/npm/nouislider.min.css">
+  <!--<link rel="stylesheet" href="./assets/css/npm/ui.jqgrid.css">-->
+  <link rel="shortcut icon" href="./assets/favicon.png"/>
+  <style>
+    /*@media (max-width: 767.98px) {
+        .page-nav-tabs {
+            border-left: none !important;
+            border-right: none !important;
+        }
+        .page-nav-tabs > li:first-child > .nav-link {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            border-left: none !important;
+        }
+        .page-nav-tabs > li:last-child > .nav-link {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+            border-right: none !important;
+        }
+    }*/
+    /*@keyframes chatAppear {
+        70% { transform: translateY(-20%); }
+        80% { transform: translateY(-20%); }
+        100% { opacity: 1; transform: none; }
+    }
+    .animation-appear {
+        opacity: 0;
+        transform: translateY(75%);
+    
+        animation: 750ms chatAppear;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+    
+        transform-origin: bottom center;
+    }
+    @media screen and (prefers-reduced-motion: reduce) {
+        .animation-appear {
+            animation-duration: 1ms;
+        }
+    }*/
+  </style>  
+</head>
+<body>
+<div class="body-container">
+
+<header class="main-header navbar-default">
+  <div class="header-intro">
+    <a class="header-brand c-white" href="#">
+      <img src="assets/image/logo-white.png" style="width:60px;">
+    </a>
+    <div class="mw-auto mx-o375r">
+      <div class="c-white fw-b" style="font-size: .75rem">Universidad Nacional de Moquegua</div>
+      <div class="c-white">Oficina de Presupuesto</div>
+      <div class="c-white">SIGEUN v5.0.1</div>
+    </div>
+  </div>
+  <div class="mr-2" style="margin-left: auto">
+    <div class="fw-b">&nbsp;</div>
+    <div>&nbsp;</div>
+    <div class="c-white mt-o5r" dir="rtl">Valencia LLamoca, Danyer Alain &nbsp; ::: &nbsp; 2020 &nbsp;</div>
+  </div>
+
+
+  <div class="navbar-menu  navbar-backdrop" id="navbarMenu"><!--collapse navbar-collapse-->
+  <div class="navbar-nav"> <!--no encunetro funcionalidad; pero no borrar-->
+  <ul class="nav">
+        
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-server fs-150g"></i>
+      </a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+        <img id="id-navbar-user-image" class="d-lg-inline-block br-round b-2 bc-white-tp1 w-3r h-3r" src="assets/image/avatar/foto.jpg" alt="Foto de usuario">
+      </a>
+
+      <div class="dropdown-menu dropdown-caret dropdown-menu-right dropdown-animated brc-primary-m3">
+        <div class="d-none d-lg-block d-xl-none">
+          <div class="dropdown-header">Bienvenido, Danyer</div>
+          <div class="dropdown-divider"></div>
+        </div>
+        <a class="dropdown-item btn btn-outline-grey btn-h-lighter-primary btn-a-lighter-primary" href="html/page-profile.html">
+          <i class="fa fa-user c-primary-m1 mr-o375r"></i>Perfil
+        </a>
+        <a class="dropdown-item btn btn-outline-grey btn-h-lighter-success btn-a-lighter-success" href="#" data-toggle="modal" data-target="#id-ace-settings-modal">
+          <i class="fa fa-cog c-success-m1 mr-o375r"></i>Configuraciones
+        </a>
+        <div class="dropdown-divider brc-primary-l2"></div>
+        <a class="dropdown-item btn btn-outline-grey btn-h-lighter-secondary btn-a-lighter-secondary" href="html/page-login.html">
+          <i class="fa fa-power-off c-warning-d1 mr-o375r"></i>Cerrar Sesión
+        </a>
+      </div>
+
+    </li>
+  </ul>
+  </div>
+  </div>
+</header>
+
+
+
+<nav class="main-nav">
+<div class="sidebar sidebar-default" id="sidebar"> <!-- expandable sidebar-fixed d-xl-block -->
+<!--<div class="sidebar-inner">-->
+<!--<div class="ace-scroll" ace-scroll> flex-grow-1-->
+  <div style="background-color: #fff"></div>
+  <div style="overflow-x: hidden; overflow-y: auto; display:grid;grid-template-columns: 1fr;grid-template-rows: 1fr">
+    
+        <ul class="nav has-active-border" role="navigation" aria-label="Main">
+        <li class="nav-item">
+            <a href="#" class="nav-link dropdown-toggle">
+                <span class="nav-text fadeable ml-1">Layouts</span>
+                <b class="caret fa fa-angle-left"></b>
+            </a>
+            <div class="hideable submenu collapse">
+            <ul class="submenu-inner">
+                <li class="nav-item">
+                  <a class="nav-link" href="html/dashboard-2.html">
+                    <span class="nav-text"><span>Dashboard 2</span></span>
+                  </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Dashboard 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="nav-text"><span>Horizontal Menu</span></span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="nav-text"><span>Two Menus 1</span></span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Two Menus 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="nav-text"><span>Landing Page 1</span></span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="nav-text"><span>Landing Page 2</span></span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="nav-text"><span>Coming Soon</span></span></a></li>
+            </ul></div>     
+            <b class="sub-arrow"></b>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link dropdown-toggle">
+                <span class="nav-text fadeable ml-1">UI Elements</span>
+                <b class="caret fa fa-angle-left"></b>
+            </a>
+            <div class="hideable submenu collapse show" style="overflow:hidden;">
+            <ul class="submenu-inner">
+                <li class="nav-item active">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-desktop-card text-blue mr-1"></i><span style="width: 100%">Elements</span>
+                  </a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i> Buttons</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i> Typography</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i><span> Secuencias Funcionales del SIAF 2020 - II</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i>Icons</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i>Charts</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i>Treeview</a></li>
+            </ul></div>
+            <b class="sub-arrow"></b>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link dropdown-toggle">
+                <span class="nav-text fadeable">Tables &amp; Grids</span>
+                <b class="caret fa fa-angle-left rt-n90"></b>
+            </a>
+            <div class="hideable submenu collapse">
+            <ul class="submenu-inner">
+                <li class="nav-item"><a href="html/tables-basic.html" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i>Basic Tables</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <span class="nav-text"><span>Dynamic Tables</span></span>
+                        <b class="caret fa fa-angle-left rt-n90"></b>
+                    </a>
+                    <div class="hideable submenu collapse">
+                    <ul class="submenu-inner">
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i>DataTables</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i>Bootstrap Table</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-desktop text-blue mr-1"></i>jqGrid</a></li>
+                    </ul></div>
+                    <b class="sub-arrow"></b>
+                </li>
+            </ul></div>
+            <b class="sub-arrow"></b>
+        </li>
+        <li class="nav-item">            
+            <a href="#" class="nav-link dropdown-toggle">
+                <span class="nav-text fadeable">Forms &amp; Elements</span>
+                <b class="caret fa fa-angle-left rt-n90"></b> 
+            </a>
+            <!--<div class="hideable submenu collapse">-->
+
+            <div class="hideable submenu collapse" style="overflow: auto">
+              <table class="ui-tree" aria-labelledby="gbox_grid-table" style="height:100%!important;">
+                
+                <tbody style="overflow-x: auto;">
+                  <tr class="ui-row" role="row">
+                    <td class="ui-grid-cell-tree" role="gridcell" aria-describedby="grid-table_id">
+                    <img src="assets/image/tree/elbow.gif" class="ui-tree-icon-elbow">
+                    <img src="assets/image/tree/leaf.png" class="ui-tree-icon-leaf">
+                    <span>Sub Menu 1</span>
+                    </td>
+                  </tr>
+                  <tr class="ui-row" role="row">
+                    <td class="ui-grid-cell-tree" role="gridcell" aria-describedby="grid-table_id">
+                      <img src="assets/image/tree/elbow.gif" class="ui-tree-icon-elbow">
+                      <img src="assets/image/tree/leaf.png" class="ui-tree-icon-leaf">
+                      <span>Sub Menu 1 DENTRO DE LAS COTIAZAVCIONES EN LINEA</span>
+                  </tr>
+                  <tr class="ui-row" role="row">
+                    <td class="ui-grid-cell-tree" role="gridcell" aria-describedby="grid-table_id">
+                      <img src="assets/image/tree/elbow-end.gif" class="ui-tree-icon-elbow">
+                      <img src="assets/image/tree/leaf.gif" class="ui-tree-icon-leaf">
+                      <span>DANYER VALENCIA LLAMOCA DANYER VALENCIA LLAMOCA</span>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <b class="sub-arrow"></b>
+        </li>
+        <li class="nav-item">               
+            <a href="html/calendar.html" class="nav-link">
+                <i class="nav-icon far fa-calendar-alt"></i>
+                <span class="nav-text fadeable"><span>Calendar</span>
+                    <span class="badge px-1 " title="2 Urgent Events"><i class='fas fa-exclamation-triangle text-140 text-danger-m2'></i></span>
+                </span>
+            </a>               
+            <b class="sub-arrow"></b>
+        </li>
+        </ul>
+
+  </div>
+<!--</div>-->
+</div>
+</nav>
+
+<main class="main">
+<div class="tabs-container"><!--tabbable-->
+<ul class="tabs tabs-default b-1" role="tablist"><!-- b-b-1-->
+  <li class="nav-item">             
+    <a class="nav-link" id="tareas-tab" data-toggle="tab" href="#tareasB" role="tab" aria-controls="home" aria-selected="true">Tareas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bien-serv-tab" data-toggle="tab" href="#bienservB" role="tab" aria-controls="profile" aria-selected="false">Bienes / Servicios</a>
+  </li>
+</ul>
+<div class="tab-content">
+
+  <div class="tab-pane fade flex-1-0-100g" id="tareasB" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="pane-two flex-1-0-100g">
+      <div class="pane-fgb">
+        <div class="pane-filter" style="grid-template-columns: 4rem 5.5rem 4rem 10rem 10rem">
+          <div >
+            <label>Año</label>
+            <select type="text" class="form-control">
+              <option value=""></option>
+              <option value=2020>2020</option>
+              <option value=2019>2019</option>
+              <option value=2018>2018</option>
+            </select>
+          </div>
+          <div >
+            <label>U.O.</label>
+            <select type="text" class="form-control">
+              <option value=""></option>
+              <option value=2020>CEPRE</option>
+              <option value=2019>ORRH</option>
+              <option value=2018>AFNEMIP</option>              
+            </select>
+          </div>
+          <div >
+            <label>S.F.</label>
+            <select type="text" class="form-control"></select>
+          </div>
+          <div >
+            <label>Tipo Tarea</label>
+            <select type="text" class="form-control"></select>
+          </div>
+          <div >
+            <label>Descripción</label>
+            <input type="text" class="form-control"/>
+          </div>
+        </div>
+
+
+        <div class="pane-grid">
+        
+        <div class="ui-grid">
+          <div class="ui-grid-view">
+            <div class="ui-grid-header brc-grey-l2"><!--  style="width: 955px;" -->
+              <table class="ui-grid-htable" role="grid" aria-labelledby="gbox_grid-table">
+                <colgroup>
+                  <col style="width:41px">
+                  <col style="width:100px">
+                  <col style="width:279px">
+                  <col style="width:130px">
+                  <col style="width:167px">
+                  <col style="width:279px">
+                </colgroup>
+                <thead class="ui-thead" role="rowgroup"><!--class="ui-grid-hbox" -->
+                <tr role="row">
+                  <th class="ui-thead-th ui-first-th-ltr-" id="grid-table_id">
+                    <div class="ui-grid-sortable" id="jqgh_grid-table_id" role="columnheader">ID
+
+                    </div>
+                  </th>
+                  <th class="ui-thead-th ui-th-ltr-" id="grid-table_sdate">
+                    <div class="ui-grid-sortable" id="jqgh_grid-table_sdate" role="columnheader" >Last Sales
+                    </div>
+                  </th>
+                  <th class="ui-thead-th ui-first-th-ltr-">
+                    <div class="ui-grid-sortable" id="jqgh_grid-table_name" role="columnheader" >Name
+                    </div>
+                  </th>
+                  <th class="ui-thead-th ui-th-ltr-" id="grid-table_stock">
+                    <div class="ui-grid-sortable" id="jqgh_grid-table_stock" role="columnheader">Stock
+                    </div>
+                  </th>
+                  <th class="ui-thead-th ui-th-ltr-" id="grid-table_ship">
+                    <div class="ui-grid-sortable" id="jqgh_grid-table_ship" role="columnheader">Ship via
+                    </div>
+                  </th>
+                  <th class="ui-thead-th ui-th-ltr-" id="grid-table_note">
+                    <div id="jqgh_grid-table_note" role="columnheader">Notes
+                    </div>
+                  </th>
+                </tr>
+                </thead>
+              </table>
+            </div>
+
+            <div class="ui-grid-content" role="grid" id="gview_grid-table" style="height: 150px;">
+              <table class="ui-grid-tbody" tabindex="0" role="presentation" aria-labelledby="gbox_grid-table" style="height:100%!important;">
+                <colgroup>
+                  <col style="width:41px;">
+                  <col style="width:100px;">
+                  <col style="width:279px;">
+                  <col style="width:130px;">
+                  <col style="width:167px;">
+                  <col style="width:279px;">
+                </colgroup>
+                <tbody>
+                  <tr class="ui-row" role="row" id="1" tabindex="-1"><!--ui-row-ltr-->
+                    <td role="gridcell" aria-describedby="grid-table_id">1</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2017-12-13</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Desktop Computer</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">Yes</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">FedEx</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note</td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="2" tabindex="-1"><!--ui-row-ltr -->
+                    <td role="gridcell" aria-describedby="grid-table_id">2</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2018-02-03</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Laptop LAPTOP Laptop LAPTOP para ven en varias lineas de esta generacion</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">Yes</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">InTime</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">Long text </td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="3" tabindex="-1"><!--ui-row-ltr-->
+                    <td role="gridcell" aria-describedby="grid-table_id">3</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2016-01-17</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">LCD Monitor</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">Yes</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">TNT</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note3</td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="4" tabindex="-1"><!--ui-row-ltr-->
+                    <td role="gridcell" aria-describedby="grid-table_id">4</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2015-12-23</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Speakers</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">No</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">ARAMEX</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note</td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="5" tabindex="-1"><!--ui-row-ltr-->
+                    <td role="gridcell" aria-describedby="grid-table_id">5</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2019-08-06</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Laser Printer</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">Yes</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">FedEx</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note2</td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="6" tabindex="0"><!--ui-row-ltr-->
+                    <td role="gridcell" aria-describedby="grid-table_id">6</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2017-12-14</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Play Station</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">No</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">FedEx</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note3</td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="7" tabindex="0">
+                    <td role="gridcell" aria-describedby="grid-table_id">7</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2016-06-20</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Mobile Telephone</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">Yes</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">ARAMEX</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note</td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="8" tabindex="0">
+                    <td role="gridcell" aria-describedby="grid-table_id">8</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2015-11-11</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Server</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">Yes</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">TNT</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note2</td>
+                  </tr>
+                  <tr class="ui-row" role="row" id="9" tabindex="0">
+                    <td role="gridcell" aria-describedby="grid-table_id">9</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2009-02-10</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Matrix Printer</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">No</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">FedEx</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note3</td>
+                  </tr>
+                  <tr  class="ui-row" role="row" id="10" tabindex="0">
+                    <td role="gridcell" aria-describedby="grid-table_id">10</td>
+                    <td role="gridcell" aria-describedby="grid-table_sdate">2007-12-03</td>
+                    <td role="gridcell" aria-describedby="grid-table_name">Desktop Computer</td>
+                    <td role="gridcell" aria-describedby="grid-table_stock">Yes</td>
+                    <td role="gridcell" aria-describedby="grid-table_ship">FedEx</td>
+                    <td role="gridcell" aria-describedby="grid-table_note">note</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div> 
+          <div class="ui-grid-pager" id="grid-pager" style="width:100%">                     
+            <div class="ui-pg-button b-0" role="button" id="first_grid-pager" title=" Primera Página ">
+              <span class="btn-icon btn-h-outline-primary btn-a-outline-primary" >
+                <span class="bgi-page-first" role="img"></span>
+              </span>
+            </div>
+            <div class="ui-pg-button b-0" href="#" role="button" id="prev_grid-pager" title=" Página Anterior ">
+              <span class="btn-icon btn-h-outline-primary btn-a-outline-primary" >
+                <span class="bgi-page-prev" role="img"></span>
+              </span>
+            </div>
+            <div class="ui-pg-button disabled ui-grid-disablePointerEvents">
+              <div class="ui-separator mr-o375r"></div>
+            </div>
+            <div style="white-space:pre">Página &nbsp;<input class="form-control d-inline-block ui-pg-input" maxlength="5" value="0" style="width:35px">&nbsp; de <span id="sp_1_grid-pager">3</span></div>
+            <div class="ui-pg-button disabled ui-grid-disablePointerEvents">
+              <div class="ui-separator ml-o375r"></div>
+            </div>
+            <div class="ui-pg-button b-0" role="button" tabindex="0" id="next_grid-pager" title="Pagina Siguiente" style="cursor: default;">
+              <span class="btn-icon btn-h-outline-primary btn-a-outline-primary" >
+                <span class="bgi-page-next" role="img"></span>
+              </span>
+            </div>
+            <div class="ui-pg-button b-0" role="button" tabindex="0" id="next_grid-pager" title=" Ultima Página ">
+              <span class="btn-icon btn-h-outline-primary btn-a-outline-primary" >
+                <span class="bgi-page-last" role="img"></span>
+              </span>
+            </div>
+            <div class="ui-pg-button disabled ui-grid-disablePointerEvents">
+              <div class="ui-separator mr-o375r"></div>
+            </div>
+            <div class="ui-pg-button b-0" role="button" tabindex="0" id="refresh-pager" title=" Actualizar ">
+              <span class="btn-icon btn-h-outline-primary btn-a-outline-primary" >
+                <span class="bgi-page-refresh" role="img"></span>
+              </span>
+            </div>
+            <div dir="rtl" id="grid-pager_right" style="width:100%">
+              <span class="ui-paging-info">Visualizando 1 - 10 de 23</span>
+            </div>
+          </div>
+        </div><!--class="ui-grid" id="gbox_grid-table"-->
+        </div>
+
+        <div class="pane-buttons">
+          <button class="btn btn-ui">
+            <i class="fa fa-edit c-blue"></i> Nuevo
+          </button>
+          <button class="btn btn-ui">
+            <i class="fa fa-edit c-blue"></i> Modificar
+          </button>
+          <button class="btn btn-ui">
+            <i class="fa fa-edit c-blue"></i> Consulta Doble
+          </button>
+        </div>
+
+      </div>
+
+
+      <div class="pane-g1e">
+        <div class="tabs-container"><!--tabbable -->
+          <ul class="tabs tabs-default b-1" role="tablist"><!-- b-b-1-->
+            <li class="nav-item">             
+              <a class="nav-link" id="tarea" data-toggle="tab" href="#tareasfte" role="tab" aria-controls="fte" aria-selected="false">Presupuesto</a><!--  active -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="area" data-toggle="tab" href="#tareaarea" role="tab" aria-controls="area" aria-selected="false">Unidades Orgánicas</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+          <div class="tab-pane fade flex-1-0-100g" id="tareasfte" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="pane-rfgb">
+            <div class="pane-filter" style="grid-template-columns: 4rem 5.5rem 4rem 10rem 10rem">
+              <div>
+                <label>Año</label>
+                <select type="text" class="form-control">
+                  <option value=""></option>
+                  <option value=2020>2020</option>
+                  <option value=2019>2019</option>
+                  <option value=2018>2018</option>
+                </select>
+              </div>
+              <div>
+                <label>U.O.</label>
+                <select type="text" class="form-control">
+                  <option value=""></option>
+                  <option value=2020>CEPRE</option>
+                  <option value=2019>ORRH</option>
+                  <option value=2018>AFNEMIP</option>              
+                </select>
+              </div>
+              <div>
+                <label>S.F.</label>
+                <select type="text" class="form-control"></select>
+              </div>
+              <div>
+                <label>Tipo Tarea</label>
+                <select type="text" class="form-control"></select>
+              </div>
+              <div>
+                <label>Descripción</label>
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+
+            <div class="pane-grid">
+
+
+                
+            </div> <!--pane-grid-->
+            <div class="pane-buttons">
+              <button class="btn btn-ui">
+                <i class="fa fa-edit c-blue"></i> Nuevo
+              </button>
+              <button class="btn btn-ui">
+                <i class="fa fa-edit c-blue"></i> Modificar
+              </button>
+              <button class="btn btn-ui">
+                <i class="fa fa-edit c-blue"></i> Consulta Doble
+              </button>
+            </div>
+            </div>    
+          </div><!--class="pane-right-content"-->
+          <div class="tab-pane fade" id="tareaarea" role="tabpanel" aria-labelledby="profile-tab">
+            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee...................
+          </div>
+          </div>
+        </div>
+      </div><!--class="pane-right"-->
+    </div>
+  </div>    
+  <div class="tab-pane fade flex-1-0-100g" id="bienservB" role="tabpanel" aria-labelledby="profile-tab">
+    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
+  </div>
+</div><!--class="tab-content-->
+</div><!--class="tabs-container-->
+</main>
+
+<footer class="main-footer">
+  <div class="footer-inner">
+    <p>SIAF SIGA &copy; 2020</p>
+    <!--<span class="mx-3 action-buttons">
+    <a href="#" class="text-blue2-m3 text-140"><i class="fab fa-twitter-square"></i></a>
+    <a href="#" class="text-blue-d1 text-140"><i class="fab fa-facebook"></i></a>
+    </span>-->
+  </div>
+</footer>
+
+
+
+<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/js/umd/popper.js"></script>
+<script type="text/javascript" src="./assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="./assets/js/npm/tree.jquery.min.js"></script>
+<!--
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootbox/bootbox.all.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+-->
+<script type="text/javascript" src="./assets/js/npm/jquery.jqgrid.src.js"></script>
+<script type="text/javascript" src="./assets/js/ace.min.js"></script>
+<script type="text/javascript" src="./assets/js/demo.min.js"></script>
+</div>
+</body>
+</html>
